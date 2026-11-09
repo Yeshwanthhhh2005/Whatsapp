@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "WhatsApp Web Clone"
+description = "A polished, responsive WhatsApp Web-style messaging interface with local mock conversations, interactive chat controls, contact details, and light and dark themes. All data and actions stay in the browser; there is no backend or real messaging."
+version = "1.0.0"
+id = "artifacts/whatsapp-clone"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19720
+
+[services.development]
+run = "pnpm --filter @workspace/whatsapp-clone run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/whatsapp-clone", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/whatsapp-clone/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19720"
+BASE_PATH = "/"

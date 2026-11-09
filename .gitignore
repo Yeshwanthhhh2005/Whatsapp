@@ -1,0 +1,43 @@
+# ---- dependencies ----
+node_modules/
+.pnpm-store/
+
+# ---- python ----
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# ---- secrets ----
+.env
+.env.*
+!.env.example
+
+# ---- build output ----
+dist/
+build/
+out-tsc/
+*.tsbuildinfo
+.tsbuildinfo
+
+# ---- local data / uploads ----
+*.db
+*.sqlite
+*.sqlite3
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# ---- editors / os ----
+.vscode/*
+!.vscode/settings.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---- misc caches ----
+.cache/
+.local/
+coverage/
+*.log

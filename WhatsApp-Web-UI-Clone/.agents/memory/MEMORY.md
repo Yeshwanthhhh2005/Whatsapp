@@ -1,0 +1,2 @@
+- [WhatsApp clone scope](whatsapp-clone-scope.md) — full-stack now: FastAPI backend in `backend/`, live Chats, demo chats and the other four sections stay local.
+- [Running on Windows](running-on-windows.md) — pnpm workspace excludes win32 binaries and the preinstall guard breaks nested installs.
